@@ -6,7 +6,7 @@ const props = defineProps({
   }
 })
 
-const root = ref(null)
+const root = ref<HTMLElement>(null)
 const lines = ref(0);
 
 onMounted(() => {
