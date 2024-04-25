@@ -37,16 +37,16 @@ onMounted(() => {
 
     <section class="hero">
       <div class="header font-fira_regular">
-      <span>
+      <span class="responsive-text-md">
         Hi, I am
       </span>
-        <h1>{{ appConfig?.public?.dev?.engName }}</h1>
-        <span class="typer flex">
+        <h1 class="responsive-text-xl">{{ appConfig?.public?.dev?.engName }}</h1>
+        <span class="typer responsive-text-md lg:responsive-text-lg flex">
         >&nbsp;
         <h2 class="anim-typing max-w-fit">{{ appConfig?.public?.dev?.role }}</h2>
       </span>
       </div>
-      <div class="intro font-fira_regular">
+      <div class="intro font-fira_regular responsive-text-sm">
         <p class="intro-cmt">
           {{ appConfig?.public?.dev?.intro }}
         </p>
@@ -58,7 +58,7 @@ onMounted(() => {
         </p>
       </div>
     </section>
-    <section class="flex flex-col w-full h-full justify-center left-img">
+    <section class="hidden md:flex md:flex-col w-full h-full justify-center left-img">
       <img src="/images/Hand%20coding-pana.svg" alt="https://storyset.com/people"
            class="hidden md:block md:w-[250px] md:h-[250px] lg:w-[400px] lg:h-[400px]"/>
     </section>
@@ -123,7 +123,6 @@ onMounted(() => {
       margin-bottom: 2rem;
 
       span {
-        font-size: 1.125rem;
         line-height: 1;
 
         &:nth-of-type(1) {
@@ -132,14 +131,12 @@ onMounted(() => {
       }
 
       h1 {
-        font-size: 3.5rem;
         line-height: 1;
         padding: 1rem 0;
         transition-delay: 0.75s;
       }
 
       .typer {
-        font-size: 2rem;
         line-height: 1;
         @apply font-fira_regular text-green-text;
         transition-delay: 1s;
@@ -199,6 +196,24 @@ onMounted(() => {
 @media (max-width: 768px) {
   #index {
     padding-left: 50px;
+    padding-right: 20px;
+
+    .index-gradient {
+      width: 200px;
+      height: 200px;
+      z-index: 10;
+      filter: blur(50px);
+      transition-delay: 1s;
+
+      &__blue {
+        background: radial-gradient(circle at 50% 50%, rgba(77, 91, 206, 0.5), rgba(76, 0, 255, 0));
+
+      }
+
+      &__green {
+        background: radial-gradient(circle at 50% 50%, rgba(67, 217, 173, 0.5), rgba(76, 0, 255, 0));
+      }
+    }
   }
 }
 

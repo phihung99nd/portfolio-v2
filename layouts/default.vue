@@ -4,6 +4,7 @@
 
 <template>
 <div class="flex flex-col justify-between w-full h-full">
+  <MobileMenu/>
   <AppHeader/>
   <slot/>
   <AppFooter/>
