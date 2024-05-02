@@ -56,12 +56,24 @@ function toggleMobileMenu() {
   opacity: 0;
   height: 0;
   user-select: none;
+  pointer-events: none;
   transition: all 0.5s ease;
+
+  * {
+    user-select: none;
+    pointer-events: none;
+  }
 
   &.show {
     opacity: 1;
     height: auto;
     user-select: auto;
+    pointer-events: auto;
+
+    * {
+      user-select: auto;
+      pointer-events: auto;
+    }
   }
 
   a {

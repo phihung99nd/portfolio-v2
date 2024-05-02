@@ -67,7 +67,7 @@ function updateLines() {
     <!-- text -->
     <div class="text-container">
       <div class="flex w-full">
-        <div class="line-numbers md:flex flex-col w-fit hidden">
+        <div class="line-numbers flex flex-col w-fit">
           <div v-for="n in lines" class="grid grid-cols-1 justify-end" :key="n">
             <div v-if="n == 1" class="col-span-1 flex justify-center">/**</div>
             <div class="col-span-1 flex justify-center" v-if="n > 1 && n < lines">*</div>

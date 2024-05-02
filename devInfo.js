@@ -35,7 +35,30 @@ export default {
                 key: '0-0-0',
                 label: 'vue.js',
                 data: 'vue',
-                description: 'My main framework is VueJS <br/> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in consequat ipsum. Vivamus feugiat ex sit amet enim iaculis lacinia. Vestibulum et nisl quis elit mollis rhoncus. In non porttitor mauris. Nullam sit amet tortor luctus, tempor risus id, feugiat purus. Phasellus sed porta est. Nam ut nunc mi. Nullam massa nulla, convallis nec risus sit amet, elementum imperdiet velit. Ut efficitur, nunc id aliquam molestie, purus dolor aliquet nulla, vitae sagittis massa ex at metus. Aliquam tempus enim non bibendum tristique.'
+                description: 'My main framework is VueJS <br/> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in consequat ipsum. Vivamus feugiat ex sit amet enim iaculis lacinia. Vestibulum et nisl quis elit mollis rhoncus. In non porttitor mauris. Nullam sit amet tortor luctus, tempor risus id, feugiat purus. Phasellus sed porta est. Nam ut nunc mi. Nullam massa nulla, convallis nec risus sit amet, elementum imperdiet velit. Ut efficitur, nunc id aliquam molestie, purus dolor aliquet nulla, vitae sagittis massa ex at metus. Aliquam tempus enim non bibendum tristique.',
+                projects: [
+                  {
+                    id: 1,
+                    shortTitle: 'BESA',
+                    longTitle: 'BESA - Online Beauty & Healthcare Booking',
+                    date: '01/2023 - 01/2024',
+                    demoLink: 'https://besa.vn/',
+                    thumbnail: 'besa-thumbnail.png',
+                    tech: ['VueJS', 'ViewUI'],
+                    detail: 'Besa.vn is a great choice for anyone looking for beauty and healthcare services. Besa is an online booking site that allows users and service providers to interact and easily exchange information about services and promotions. Therefore, searching and booking on Besa becomes faster and simpler.'
+                  },
+                  {
+                    id: 2,
+                    shortTitle: 'Portfolio v1',
+                    longTitle: 'Portfolio version 1 using VueJS',
+                    date: '02/2024',
+                    demoLink: 'https://phihungtran.vercel.app/',
+                    thumbnail: 'dummy-img.png',
+                    tech: ['VueJS', 'Vuetify', 'VueKinesis'],
+                    detail: 'A personal portfolio to briefly present my information to recruiter. ' +
+                        'The website is compilation of academic and professional materials that exemplifies my education, skills, experiences and work ethics. '
+                  }
+                ]
               },
               {
                 key: '0-0-1',
@@ -68,12 +91,37 @@ export default {
                 key: '0-1-0',
                 label: 'ViewUI.lib',
                 data: 'viewui',
-                description: 'I used ViewUI for BESA webapp'
+                description: 'I used ViewUI for BESA webapp',
+                projects: [
+                  {
+                    id: 1,
+                    shortTitle: 'BESA',
+                    longTitle: 'BESA - Online Beauty & Healthcare Booking',
+                    date: '01/2023 - 01/2024',
+                    demoLink: 'https://besa.vn/',
+                    thumbnail: 'besa-thumbnail.png',
+                    tech: ['VueJS', 'ViewUI'],
+                    detail: 'Besa.vn is a great choice for anyone looking for beauty and healthcare services. Besa is an online booking site that allows users and service providers to interact and easily exchange information about services and promotions. Therefore, searching and booking on Besa becomes faster and simpler.'
+                  },
+                ]
               },
               {
                 key: '0-1-1',
                 label: 'Vuetify.lib',
-                data: 'vuetify'
+                data: 'vuetify',
+                projects: [
+                  {
+                    id: 2,
+                    shortTitle: 'Portfolio v1',
+                    longTitle: 'Portfolio version 1 using VueJS',
+                    date: '02/2024',
+                    demoLink: 'https://phihungtran.vercel.app/',
+                    thumbnail: 'dummy-img.png',
+                    tech: ['VueJS', 'Vuetify', 'VueKinesis'],
+                    detail: 'A personal portfolio to briefly present my information to recruiter. ' +
+                        'The website is compilation of academic and professional materials that exemplifies my education, skills, experiences and work ethics. '
+                  }
+                ]
               }
             ]
           },

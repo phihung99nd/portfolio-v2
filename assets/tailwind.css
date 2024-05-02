@@ -29,8 +29,15 @@ main.page {
 }
 
 #mobile-page-title {
-    @apply flex justify-center items-center px-4 py-2 border-bot;
+    @apply font-fira_regular flex justify-start items-center gap-4 px-4 py-4 border-bot;
     color: white;
+}
+
+@layer utilities {
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #455c8575 transparent;
+    }
 }
 
 /* Responsive */
