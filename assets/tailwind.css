@@ -207,3 +207,8 @@ main.page {
     color: #6953f8;
     font-family: "Fira Code Medium";
 }
+
+.code .code-string {
+    color: #489871;
+    font-family: "Fira Code Medium";
+}

@@ -11,10 +11,10 @@ const social = useRuntimeConfig().public.dev.contact.social
         </span>
         <div id="social-icon" class="flex">
           <NuxtLink :to="social.facebook.url" target="_blank" class="border-right">
-            <img src="/icons/social/facebook.svg"/>
+            <img src="/icons/social/facebook.svg" alt="facebook-icon"/>
           </NuxtLink>
           <NuxtLink :to="social.github.url" target="_blank" class="border-right">
-            <img src="/icons/social/github.svg"/>
+            <img src="/icons/social/github.svg" alt="github-icon"/>
           </NuxtLink>
         </div>
       </div>
@@ -24,11 +24,11 @@ const social = useRuntimeConfig().public.dev.contact.social
         </span>
         <div class="flex flex-wrap">
           <NuxtLink title="People illustrations by Storyset" to="https://storyset.com/people" target="_blank"
-                    class="flex justify-center items-center px-2 py-2">
+                    class="flex justify-center items-center px-2 py-2 transition-ease hover:text-white">
             Storyset
           </NuxtLink>
           <NuxtLink title="The Next-Gen UI Suite for Vue.js" to="https://primevue.org/nuxt" target="_blank"
-                    class="flex justify-center items-center px-2 py-2">
+                    class="flex justify-center items-center px-2 py-2 transition-ease hover:text-white">
             PrimeVue
           </NuxtLink>
         </div>

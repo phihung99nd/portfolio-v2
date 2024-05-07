@@ -176,5 +176,58 @@ export default {
         ]
       }
     }
+  },
+  projects: {
+    techList: ['Vue', 'React', 'Angular'],
+    items: {
+      "1": {
+        title: 'TV360 Jobs Management',
+        img: 'tv360-thumbnail.png',
+        tech: ['React'],
+        tag: 'admin_page',
+        detail: {
+          date: '',
+          description: '',
+          members: '',
+          responsibility: ''
+        }
+      },
+      "2": {
+        title: 'SInvoice Report',
+        img: 'sinvoice-thumbnail.png',
+        tech: ['Angular'],
+        tag: 'invoicing',
+        detail: {
+          date: '',
+          description: '',
+          members: '',
+          responsibility: ''
+        }
+      },
+      "3": {
+        title: 'BESA',
+        img: 'besa-thumbnail.png',
+        tech: ['Vue'],
+        tag: 'ecommerce',
+        detail: {
+          date: '01/2023 - 01/2024',
+          description: 'Lorem Ipsum',
+          members: '5 members (2 FE, 2 BE, 1 Tester)',
+          responsibility: 'Lead FE'
+        }
+      },
+      "4": {
+        title: 'AgMission',
+        img: 'agnav-thumbnail.png',
+        tech: ['Angular'],
+        tag: 'invoicing',
+        detail: {
+          date: '',
+          description: '',
+          members: '',
+          responsibility: ''
+        }
+      }
+    }
   }
 }

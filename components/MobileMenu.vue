@@ -26,8 +26,8 @@ function toggleMobileMenu() {
     <NuxtLink id="app-name" class="text-menu-text font-fira_regular text-gray-text flex h-full items-center mx-5" to="/">
       {{ config?.public?.dev?.app_name}}
     </NuxtLink>
-    <img src="/icons/bento-menu.svg" v-if="!menuOpen" @click="toggleMobileMenu()" class="w-8 h-8 mx-5 my-auto cursor-pointer"/>
-    <img src="/icons/bento-menu-close.svg" v-else @click="toggleMobileMenu()" class="w-7 h-7 mx-6 my-auto cursor-pointer"/>
+    <img src="/icons/bento-menu.svg" alt="bento-icon" v-if="!menuOpen" @click="toggleMobileMenu()" class="w-8 h-8 mx-5 my-auto cursor-pointer"/>
+    <img src="/icons/bento-menu-close.svg" alt="close-icon" v-else @click="toggleMobileMenu()" class="w-7 h-7 mx-6 my-auto cursor-pointer"/>
   </div>
 
 <!-- Toggle menu -->

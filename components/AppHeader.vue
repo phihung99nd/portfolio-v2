@@ -12,7 +12,7 @@ const config = useRuntimeConfig();
       <NuxtLink id="nav-link" to="/" exact-active-class="active-link">_home</NuxtLink>
       <NuxtLink id="nav-link" to="/about" exact-active-class="active-link">_about_me</NuxtLink>
       <NuxtLink id="nav-link" to="/projects" exact-active-class="active-link">_projects</NuxtLink>
-      <NuxtLink id="nav-link" to="/contact" exact-active-class="active-link">_contact-me</NuxtLink>
+      <NuxtLink id="nav-link" to="/contact" exact-active-class="active-link">_contact_me</NuxtLink>
     </div>
   </nav>
 </header>

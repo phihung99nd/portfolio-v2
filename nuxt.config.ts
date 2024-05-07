@@ -2,8 +2,14 @@ const devInfo = require('./devInfo.js');
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    app: {
+        pageTransition: { name: 'page', mode: 'out-in' }
+    },
     devtools: {enabled: true},
-    modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue'],
+    experimental: {
+        viewTransition: true,
+    },
+    modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@formkit/auto-animate/nuxt'],
     // css: ['~/assets/primevue.css'],
     css: [
         'primevue/resources/themes/aura-light-green/theme.css',
