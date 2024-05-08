@@ -10,11 +10,17 @@ export default {
   contact: {
     social: {
       facebook: {
+        name: 'Trần Phi Hùng',
         url: 'https://www.facebook.com/tranphi.hung.1238/'
       },
       github: {
+        name: 'phihung99nd',
         url: 'https://github.com/phihung99nd'
       }
+    },
+    contact: {
+      gmail: 'phihung99nd@gmail.com',
+      phone: '0947170199'
     }
   },
   about: {
@@ -229,5 +235,5 @@ export default {
         }
       }
     }
-  }
+  },
 }

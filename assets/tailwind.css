@@ -203,8 +203,23 @@ main.page {
     font-family: "Fira Code Medium";
 }
 
+.code .code-comment {
+    @apply text-gray-text;
+    font-family: "Fira Code Medium";
+}
+
+.code .code-tag {
+    color: #d48b42;
+    font-family: "Fira Code Medium";
+}
+
+.code .code-function {
+    color: #3f72e3;
+    font-family: "Fira Code Medium";
+}
+
 .code .code-object {
-    color: #6953f8;
+    color: #c07596;
     font-family: "Fira Code Medium";
 }
 
