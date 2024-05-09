@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     experimental: {
         viewTransition: true,
     },
-    modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@formkit/auto-animate/nuxt'],
+    modules: ['@nuxtjs/tailwindcss', 'nuxt-primevue', '@formkit/auto-animate/nuxt', '@vueuse/nuxt'],
     // css: ['~/assets/primevue.css'],
     css: [
         'primevue/resources/themes/aura-light-green/theme.css',

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {onClickOutside} from "@vueuse/core";
+
 const props = defineProps({
   header: {
     type: String,
@@ -8,6 +10,8 @@ const props = defineProps({
 const visible = defineModel('visible', { default: false })
 
 const fs = ref(false);
+const target = ref<HTMLElement>();
+onClickOutside(target, (evt: Event) => {closeModal()})
 
 function closeModal() {
   visible.value = false;
@@ -20,7 +24,7 @@ function toggleFullscreen() {
 
 <template>
 <div class="fixed w-full h-full z-20 top-0 left-0 bg-darken-bg bg-opacity-50" :class="{ hidden: !visible}">
-  <div id="window" class="font-fira_regular flex flex-col w-[90%] md:w-2/3 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] border border-green-text bg-darken-bg rounded"
+  <div ref="target" id="window" class="font-fira_regular flex flex-col w-[90%] md:w-[66%] lg:w-[60%] max-w-[900px] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] border border-green-text bg-darken-bg rounded"
        :class="{ fullscreen: fs }">
     <div id="window-header" class="px-2 py-2 flex justify-between items-center border-bot">
       <div class="text-gray-text text-[14px]">{{ header }}</div>
@@ -31,7 +35,7 @@ function toggleFullscreen() {
       </div>
     </div>
     <div id="window-content" class="px-4 py-4 h-fit overflow-x-hidden overflow-y-auto custom-scrollbar">
-      <slot>
+      <slot :fullscreen="fs">
         <div class="flex justify-center items-center">
           <img src="/images/empty%20data.svg" alt="empty-data" class="w-full md:w-2/3 lg:w-1/2 object-cover"/>
         </div>
@@ -52,6 +56,7 @@ function toggleFullscreen() {
   &.fullscreen {
     width: calc(100% - 30px) !important;
     height: calc(100% - 30px) !important;
+    max-width: none;
 
     #window-content {
       height: stretch !important;

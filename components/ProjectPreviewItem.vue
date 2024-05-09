@@ -26,11 +26,11 @@ onMounted(() => {
       // If element is in viewport, add the 'show' class to trigger the animation
       if (entry.isIntersecting) {
         projectPreviewItem.value.classList.add('show');
-        // observer.unobserve(projectPreviewItem.value) // disable observer once the element has shown
+        observer.unobserve(projectPreviewItem.value) // disable observer once the element has shown
       }
-      else {
-        projectPreviewItem.value.classList.remove('show');
-      }
+      // else {
+      //   projectPreviewItem.value.classList.remove('show');
+      // }
     });
   }
 
@@ -40,9 +40,9 @@ onMounted(() => {
   observer.observe(projectPreviewItem.value);
 })
 
-onBeforeUnmount(() => {
-  observer.unobserve(projectPreviewItem.value)
-})
+// onBeforeUnmount(() => {
+//   observer.unobserve(projectPreviewItem.value)
+// })
 
 function toggleDetail() {
   openDetail.value = !openDetail.value;
@@ -61,14 +61,14 @@ function toggleDetail() {
       </div>
       <div class="flex gap-4 items-center">
         <Button class="text-gray-text text-sm hover:text-green-text" icon="pi pi-at" label="Detail" text @click="toggleDetail"/>
-        <NuxtLink class="flex items-center" :to="item.demoLink" target="_blank" rel="noopener">
+        <NuxtLink v-if="item.demoLink" class="flex items-center" :to="item.demoLink" target="_blank" rel="noopener">
           <Button class="text-gray-text text-sm hover:text-green-text" icon="pi pi-external-link" label="Demo" text/>
         </NuxtLink>
       </div>
     </div>
     <div class="w-full p-3 border border-gray-text rounded-2xl">
       <div class="flex flex-col items-center xl:items-start xl:flex-row gap-2 xl:gap-4">
-        <img class="w-full lg:w-2/3 xl:w-1/2 aspect-video object-cover rounded-xl" :src="`/projects/${item.thumbnail}`"
+        <img class="w-full lg:w-2/3 xl:w-1/2 aspect-video object-contain rounded-xl" :src="`/projects/${item.thumbnail}`"
              alt="project-thumbnail"/>
         <div class="flex flex-col gap-2">
           <div class="project-title font-fira_medium text-purple-500">
@@ -81,8 +81,8 @@ function toggleDetail() {
         </div>
       </div>
     </div>
-    <div class="project-detail flex gap-20 py-2 text-gray-text" :class="{ show: openDetail }">
-      <p>{{ item.detail }}</p>
+    <div class="project-detail w-full flex gap-20 py-2 text-gray-text" :class="{ show: openDetail }">
+      <p class="grow" v-html="item.detail"></p>
       <Button icon="pi pi-times" text rounded @click="toggleDetail"/>
     </div>
   </div>
