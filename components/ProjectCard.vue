@@ -67,7 +67,7 @@ function showProjectDetail() {
         </div>
         <div class="w-full">
           <div class="my-5 font-fira_bold text-white text-xl">Description</div>
-          <div class="text-gray-text" :class="{'columns-2': fullscreen}" v-html="project.detail.description"></div>
+          <div class="text-gray-text" :class="{'column-layout': fullscreen}" v-html="project.detail.description"></div>
         </div>
       </template>
     </WindowModal>
@@ -98,5 +98,13 @@ function showProjectDetail() {
   }
 }
 
+@media (min-width: 768px) {
+  .column-layout {
+    max-height: 500px;
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 20px;
+  }
+}
 
 </style>

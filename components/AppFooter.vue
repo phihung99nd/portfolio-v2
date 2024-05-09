@@ -6,7 +6,7 @@ const social = useRuntimeConfig().public.dev.contact.social
   <footer class="flex border-top text-gray-text font-fira_regular">
     <div class="w-full flex flex-wrap justify-start md:justify-between">
       <div id="social-footer" class="flex justify-start">
-        <span id="social-title" class="h-full flex justify-center items-center grow responsive-text-sm border-right px-4 py-2">
+        <span id="social-title" class="h-full flex justify-start md:justify-center items-center grow responsive-text-sm border-right px-2 py-2">
           hit me up:
         </span>
         <div id="social-icon" class="flex">

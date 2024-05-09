@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const sections = useRuntimeConfig().public.dev.about.sections;
 
-const currentSection = ref('expertise-info');
+const currentSection = ref(Object.keys(sections)[0]);
 
 const isActiveSection = computed(() => {
   return (section: string) => currentSection.value == section;
@@ -9,6 +9,7 @@ const isActiveSection = computed(() => {
 
 const folderNodes = ref([]);
 const selectedKey = ref({});
+const expandedKeys = ref({});
 const currentNode = ref({description: ''});
 const projectPreviewKey = ref(0);
 const openSidebar = ref(false);
@@ -21,6 +22,9 @@ onBeforeMount(() => {
 
 onMounted(() => {
   onRefreshFolder();
+  expandedKeys.value = {[`${folderNodes.value[0].key}`]: true};
+  selectedKey.value = {[`${folderNodes.value[0].children[0].key}`]: true};
+  currentNode.value = folderNodes.value[0].children[0];
   document.addEventListener('keydown', navigateByShortcut);
 })
 
@@ -141,6 +145,7 @@ function closeFile() {
         <div class="text-green-text flex items-center px-4 py-2 border-bot">{{ currentSection }}</div>
         <Tree
             v-model:selectionKeys="selectedKey"
+            v-model:expandedKeys="expandedKeys"
             :value="folderNodes"
             class="min-w-full w-fit"
             selectionMode="single"
