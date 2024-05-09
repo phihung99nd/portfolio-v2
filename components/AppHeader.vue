@@ -25,15 +25,30 @@ const config = useRuntimeConfig();
 }
 #nav-link {
   border-right: 1px solid #07a787;
-  @apply text-gray-text font-fira_regular px-6 py-3 h-full flex items-center transition-ease;
+
+  @apply relative text-gray-text font-fira_regular px-6 py-3 h-full flex items-center transition-ease;
 
   &:hover {
     @apply bg-hover-bg text-green-text;
   }
 
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.25rem;
+    background-color: transparent;
+    @apply transition-ease;
+  }
+
   &.active-link {
     @apply text-green-text;
-    border-bottom: 0.25rem solid #07a787;
+
+    &:after {
+      background-color: #07a787;
+    }
   }
 }
 </style>

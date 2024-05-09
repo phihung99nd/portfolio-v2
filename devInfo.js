@@ -19,7 +19,7 @@ export default {
         },
         contact: {
             gmail: 'phihung99nd@gmail.com',
-            phone: '0947170199'
+            phone: '+84 947170199'
         }
     },
     about: {

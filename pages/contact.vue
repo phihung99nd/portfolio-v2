@@ -98,12 +98,12 @@ async function sendEmail() {
           </div>
           <div class="flex flex-col text-gray-text overflow-hidden transition-ease border-bot"
                :class="{ 'h-0': !contactExpd}">
-            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text"><i class="pi pi-envelope"></i>
+            <a :href="`mailto:${contacts.contact.gmail}`" class="flex items-center gap-2 pl-4 py-1 hover:text-green-text cursor-pointer"><i class="pi pi-envelope"></i>
               {{ contacts.contact.gmail }}
-            </div>
-            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text"><i
+            </a>
+            <a :href="`tel:${contacts.contact.phone}`" class="flex items-center gap-2 pl-4 py-1 hover:text-green-text cursor-pointer"><i
                 class="pi pi-phone"></i>{{ contacts.contact.phone }}
-            </div>
+            </a>
           </div>
         </div>
         <div class="flex flex-col">
@@ -112,11 +112,11 @@ async function sendEmail() {
                                             :class="{ 'rotate-90': socialExpd}"></i>_social
           </div>
           <div class="flex flex-col text-gray-text overflow-hidden transition-ease" :class="{ 'h-0': !socialExpd}">
-            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text"
+            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text cursor-pointer"
                  @click="toExternalLink(contacts.social.facebook.url)"><i class="pi pi-facebook"></i>
               {{ contacts.social.facebook.name }}
             </div>
-            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text"
+            <div class="flex items-center gap-2 pl-4 py-1 hover:text-green-text cursor-pointer"
                  @click="toExternalLink(contacts.social.github.url)"><i
                 class="pi pi-github"></i>{{ contacts.social.github.name }}
             </div>
@@ -167,7 +167,7 @@ async function sendEmail() {
               root: { class: 'bg-transparent border border-gray-text w-[300px] p-2'}
             }"/>
             </div>
-            <button class="button-57" :class="{sent: sentFlag}" @click="sendEmail" role="button"><span class="text">let collaborate;</span><span
+            <button class="button-57" :class="{sent: sentFlag}" @click="sendEmail" role="button"><span class="text">let's collaborate;</span><span
                 class="flex item-center text-white">Sent<i class="pi pi-check ml-2"></i></span></button>
           </div>
         </div>
