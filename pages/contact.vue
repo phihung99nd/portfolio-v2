@@ -124,14 +124,14 @@ async function sendEmail() {
         </div>
       </div>
     </div>
-    <div class="font-fira_regular flex flex-col grow w-full h-full">
+    <div class="font-fira_regular flex flex-col grow w-full h-full overflow-x-hidden overflow-y-auto custom-scrollbar">
       <div class="flex justify-start w-full border-bot">
         <div class="text-green-text max-w-full flex items-center gap-2 border-right px-4 py-2">
           <span class="text-ellipsis overflow-hidden">_form</span>
           <!--          <i class="pi pi-times text-xs"></i>-->
         </div>
       </div>
-      <div class="w-full h-full flex">
+      <div class="w-full grow flex">
         <div id="left"
              class="w-full lg:w-1/2 h-full p-5 text-gray-text flex md:border-right">
           <div class="flex flex-col gap-4">
